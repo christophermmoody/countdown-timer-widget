@@ -44,7 +44,7 @@
 	  <div id="counter" class="running">Timer</div>
 	</div>
 	<div id="buttons" align="center">
-	<button name="start" onclick="timer()">Start Timer</button>
+	<button name="start" onclick="timer(); this.disabled=true;">Start Timer</button>
 	<button name="start" onclick="javascript:location.reload(true)">Reset Timer</button>
 	</div>
 	
