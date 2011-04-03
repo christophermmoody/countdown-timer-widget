@@ -1,6 +1,9 @@
 <Module>
   <ModulePrefs 
     title="Countdown Timer" 
+	description="A countdown timer widget."
+	author="Jeremy Chalmer"
+	author_email="chalmer.j@gmail.com"
     height="130"/>
   <UserPref 
     name="countdown" 
