@@ -23,7 +23,7 @@
 	  height: 200px;
 	}
 	#counter{
-	  font-size: 75px;
+	  font-size: 80px;
 	  position: relative;
 	  top: 30%;
 	  vertical-align: middle;
