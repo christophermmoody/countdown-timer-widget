@@ -1,7 +1,7 @@
 <Module>
   <ModulePrefs 
     title="Countdown Timer" 
-    height="200"/>
+    height="130"/>
   <UserPref 
     name="countdown" 
     display_name="Timer Length:"
@@ -23,7 +23,7 @@
 	  height: 200px;
 	}
 	#counter{
-	  font-size: 60px;
+	  font-size: 75px;
 	  position: relative;
 	  top: 30%;
 	  vertical-align: middle;
