@@ -5,7 +5,8 @@
 	description="A countdown timer widget."
 	author="Jeremy Chalmer"
 	author_email="chalmer.j@gmail.com"
-	screenshot="http://i.imgur.com/bWNfH.png"
+	screenshot="http://countdown-timer-widget.googlecode.com/svn/trunk/screenshots/280px.png"
+	thumbnail="http://countdown-timer-widget.googlecode.com/svn/trunk/screenshots/120px_thumb.png"
 	width="400"
     height="130"/>
   <UserPref 
