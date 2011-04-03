@@ -1,0 +1,15 @@
+<Module>
+  <ModulePrefs 
+    title="Countdown Timer" 
+    height="200"/>
+  <UserPref 
+    name="countdown" 
+    display_name="Timer Length:"
+    default_value="10"
+    required="true" />
+   <Content type="html"> 
+  <![CDATA[ 
+  Hello, World!
+  ]]> 
+  </Content>
+</Module>
