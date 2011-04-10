@@ -8,7 +8,8 @@
 	screenshot="http://countdown-timer-widget.googlecode.com/svn/trunk/screenshots/280px.png"
 	thumbnail="http://countdown-timer-widget.googlecode.com/svn/trunk/screenshots/120px_thumb.png"
 	width="150"
-    height="30"/>
+    height="30"
+	scaling = "true"/>
   <UserPref 
     name="countdown" 
     display_name="Timer Length:"
