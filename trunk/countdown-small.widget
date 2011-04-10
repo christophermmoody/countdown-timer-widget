@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs 
+    title="Countdown Timer Small" 
+	description="A countdown timer widget. (Small Version)"
+	author="Jeremy Chalmer"
+	author_email="chalmer.j@gmail.com"
+	screenshot="http://countdown-timer-widget.googlecode.com/svn/trunk/screenshots/280px.png"
+	thumbnail="http://countdown-timer-widget.googlecode.com/svn/trunk/screenshots/120px_thumb.png"
+	width="150"
+    height="30"/>
+  <UserPref 
+    name="countdown" 
+    display_name="Timer Length:"
+    default_value="10"
+    required="true" />
+   <Content type="html"> 
+  <![CDATA[
+	<style type="text/css">
+
+	#counter_wrapper.running {
+	  background-color: #8dff9c;
+	}
+	#counter_wrapper.ended {
+	  background-color: #ff8a90;
+	}
+	#counter_wrapper {
+	  display: inline-block;
+	  border-width: 1px;
+	  border-style: solid;
+	  height: 25px;
+	  width: 60px;
+	}
+	#counter{
+	  position: relative;
+	  font-size: 12px;
+	  top: 20%;
+	  vertical-align: middle;
+	  text-align: center;
+	  font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	}
+	#buttons {
+
+		top: 4px;
+
+		position: relative;
+
+		display: inline;
+
+	}
+	#buttons button{
+		background-color: #dedede;
+		border-color: black;
+		border-width: 1px;
+		border-style: solid;
+		font-size: 10px;
+		font-family: sans-serif;
+	}
+
+	</style>
+
+	<div id="buttons">
+	<button name="start" onclick="timer()">Start</button>
+	<button name="start" onclick="javascript:location.reload(true)">Reset</button>
+	</div>
+	<div id="counter_wrapper" class="running">
+	  <div id="counter" class="running">Timer</div>
+	</div>
+
+	<script type="text/javascript">
+	   // Get userprefs
+	    var prefs = new gadgets.Prefs();
+	  var seconds = prefs.getInt("countdown");
+	  var milli = 0
+	  var t;
+	  var mlength = String(milli).length
+
+	  // Init the counter
+	  document.getElementById("counter").innerHTML=seconds+"."+"0"+milli;
+
+	  function timer(){
+	    if (milli <= 0){
+	      milli = 99
+	      seconds -=1
+	      }
+	    if (seconds <= -1){
+	      milli = 0
+	      seconds +=1
+	      }
+
+	    else
+	      milli-=1
+	      var mlength = String(milli).length
+
+	    if (mlength <= 1){
+	      document.getElementById("counter").innerHTML=seconds+"."+"0"+milli;
+	    }
+
+	    else 
+	      document.getElementById("counter").innerHTML=seconds+"."+milli;
+
+	    t = setTimeout("timer()",10);
+
+	    if (seconds == 0 && milli == 0 ){
+	      document.getElementById("counter").innerHTML="Time's Up!"
+	      document.getElementById("counter_wrapper").className = "ended";
+	    }
+
+	  }      
+
+
+	</script>
+	
+	]]> 
+	</Content>
+</Module>
