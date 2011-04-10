@@ -14,7 +14,9 @@
     display_name="Timer Length:"
     default_value="10"
     required="true" />
-   <Content type="html"> 
+   <Content type="html"
+	preferred_width = "150"
+	preferred_height = "30"> 
   <![CDATA[
 	<style type="text/css">
 
